@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>SPA</title>
+</head>
+<body>
+	{{> header }}
+ {{> registerform }}
+ {{> loginform }}
+ {{> UsersList }}
+</body>
+<style>
+	.User-box{
+		max-height: 160px;
+		max-width: 160px;
+		box-shadow: 0 0 10px rgba(0,0,60,0.9);
+		position: relative;				
+		margin:auto;
+		top: 10%;
+		padding: 3px;
+	}
+	.User-box:hover{
+		transition: 0.9s ease;
+		box-shadow: 0 0 10px rgba(0,100,100,0.9);
+	}
+	.Avatar{
+		text-align: center;
+		align-content: center;
+		}
+	.Avatar img{
+		height: 70px;
+		width: 70px;
+		border: 3px solid purple;
+		border-bottom: 0;
+		border-left: 1px solid purple;
+		border-radius: 60%;
+		}
+	.Avatar img:hover{
+		border-color: red;
+		transition: 0.7s ease;
+	}	
+	.User-email{
+		color: white;
+		text-shadow: 1px 1px 2px white, 0 0 1em purple; 
+		word-break: break-all;
+	}
+	.header{
+		height: 200px;
+		width: 100%;
+		border-bottom: 1px double lightgrey;
+		-webkit-box-shadow: 2px 7px 7px -3px rgba(14, 124, 208, 0.28);
+-moz-box-shadow: 2px 7px 7px -3px rgba(14, 124, 208, 0.28);
+box-shadow: 2px 7px 7px -3px rgba(14, 124, 208, 0.28);
+	}
+	.header-shadow{
+			background-color: rgba(0, 0, 0, 0.9);
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+			height: 100%;
+	}
+	.sub-button{
+		height: 40px;
+		min-width: 120px;
+		cursor: pointer;
+		border-radius: 4px;
+		border-top: none;
+		border-right: none;
+		border-left: 2px solid grey;
+		box-shadow: 0 0 10px rgba(0,0,0,0.9);
+	}
+	.sub-button:hover{
+		transition: 0.9s ease;
+		box-shadow: 0 0 10px rgba(0,100,100,0.9);
+	}
+	.form-image{
+		margin-bottom: 20px;
+		margin-top: 20px;
+	}
+	h2{
+		 color: black;
+		}
+	.form-field{
+		display: block;
+		margin: auto;
+		margin-bottom: 20px;
+		width: 90%;
+		height: 30px;
+		border-bottom: 1px solid lightgray;
+		border-left : 2px solid gray;
+		border-top: none;
+		border-right : none;
+		border-radius: 5px;
+		transform: skewX(4deg);
+		box-shadow: 0 0 10px rgba(0,0,0,0.5) inset;
+		transition: 0.9s ease;
+	}
+	.form-field:hover{
+		box-shadow: 0 0 10px rgba(0,100,100,0.9);
+	}
+	.form-field:focus{
+		transform: scale(1.1);
+	}
+	.Users-list{
+		margin: auto;
+		margin-top: 40px !important;
+		height: 500px;
+		width: 60%;
+		border: 1px double grey;
+		box-shadow: 0 10 13 rgba(0,0,0, 0.7);
+		overflow-y: scroll; 
+	}
+	.User-card{
+		height: 70px;
+		width: 100%;
+		display: flex;
+		
+		text-align: center;
+		border-bottom: 2px double lightgrey;
+		box-shadow: 0 0 10px rgba(0,100,100,0.4);
+	}
+	.User-card img{
+		border-radius: 60%;
+		border: 1px solid grey;
+		height: 70px;
+		width: 70px;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		$(".registration").hover(function(){
+		$(".registration").css({"background-color" : "lightgrey"})
+						}, function callback(){
+		$(".registration").css({"background-color" : "white"})
+	})
+	$(".registration").css({"position" : "relative",
+							"text-align" : "center",
+							"background-color" : "white",
+							"box-shadow" : "0 0 10px rgba(0,0,0,0.7)", 
+							"left" : "0","top" : "30px",
+							 "width" : "500px", 
+							 "transition" : "0.7s ease",
+							 "max-height" : "1000px",
+							 "padding" : "20px",
+							 "margin" : " 10px auto",
+						});
+	//$('.message-box').hide()
+	//$('.form-image').on('change', function(){
+		//var file = this.files
+	//})
+	//$('.register-form').submit(function(event){
+		//var form = this
+		//event.preventDefault()
+		//$.ajax({
+			////url : action,
+			//method : 'POST',
+			//dataType : 'json',
+			//data : form.serialize(),
+			//success : function(data){
+				//alert(data)
+			//}
+		//})
+	//})
+
+	})
+</script>
+</html>

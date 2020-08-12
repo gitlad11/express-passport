@@ -1,0 +1,12 @@
+<div class='Users-list'>
+	{{#each users }}
+	<div class='User-card'>
+		{{#if image }}
+			<img src='{{ image }}'/>
+			{{else}}
+			<img src='icons8-customer.png'/>
+		{{/if}}
+		<p>{{ email }}</p>
+	</div>
+	{{/each}}
+</div>
